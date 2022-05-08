@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rubik:wght@400;500;700&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background: #ff7a7a;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  header h1 , .text {
+      color: #fff;
+  }
+
+  .btn {
+    background: #6055a5;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px rgba(119, 109, 182, 0.589);
+    color: #fff;
+    
+  }
+
+  .btn span {
+    opacity: .5;
+  }
+
+  .wrapper {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px rgba(31, 24, 24, 0.247);
+  }
+
+  .wrapper form {
+    position: relative;
+  }
+
+  .wrapper .icon-error {
+    position: absolute;
+    left: 90%;
+    top: 3%;
+    opacity: 0;
+  }
+
+  .icon-error:nth-child(3) {
+    top: 25%;
+  }
+
+  .icon-error:nth-child(7) {
+      top: 47%;
+  }
+
+  .icon-error:nth-child(11) {
+      top: 69%;
+  }
+  
+
+  .wrapper label {
+      display: none;
+  }
+
+ .wrapper input {
+      border: 1px solid hsl(246, 25%, 77%);
+      border-radius: 5px;
+      outline: none;
+      padding: 1em;
+      
+  }
+
+  input::placeholder {
+  color: #3e3c49;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 1em;
+  }
+
+  #button {
+    border: none;
+    background-color: #38cc8c;
+    border-radius: 10px;
+    box-shadow: 0 5px #31af79;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  .foo {
+    color: red;
+    display: none;
+    font-style: italic;
+    margin-bottom: .8rem;
+    text-align: right;
+  }
+
+  .text1 {
+    color: #b9b6d3;
+  }
+
+  .text1 span {
+    color: red;
+  }
+
+
+ 
+@media screen and (max-width: 768px) {
+    body {
+     background-image: url('images/bg-intro-mobile.png');
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+    }
+
+    section {
+      display: grid;
+      grid-template-columns: auto;
+      place-content: center;
+       padding: 1.6em;  
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+
+    h1 {
+        font-size: 2em;
+        font-weight: 700;
+        padding-bottom: .6em;
+    }
+
+    .text {
+        font-size: .8em;
+        font-weight: 500;
+        line-height: 2em;
+        
+    }
+
+    
+    .loo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn {
+     
+        font-size: .9em;
+        font-weight: 600;
+        margin-bottom: 1.5em;
+        padding: 1em 5em 1em 5em;
+        text-align: center;
+        
+    }
+
+    .wrapper {
+        padding: 1.5em;
+    }
+
+    input {
+        display: block;
+        height: 60px;
+        margin-bottom: 1.2em;
+        width: 100%;
+    }
+
+    #button {
+        height: 50px;
+        width: 100%;
+    }
+   
+    .text1 {
+        font-size: .8em;
+        font-weight: 500;
+        padding-top: 1em;
+        padding-left: 1.2em;
+        text-align: center;
+    }
+
+}  
+
+
+
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url('images/bg-intro-desktop.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    section {
+      
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-content: center;
+        margin: 4em 0 0 3em;
+        gap: 5em;
+        
+    }
+
+    
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+   
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      margin-bottom: .6em;
+    }
+
+    header .text {
+      font-size: 1.2em;
+      font-weight: 400;
+    }
+
+    .loo {
+     
+     padding: 2em;
+     
+    }
+
+    .btn {
+      font-size: 1em;
+      font-weight: 500;
+      margin-bottom: 1em;
+      padding: .8em;
+      text-align: center;
+    }
+
+
+    .wrapper {
+      padding: 2em;
+      
+    }
+
+    input {
+      display: block;
+      height: 60px;
+      margin-bottom: 1.2em;
+      width: 100%;
+    }
+
+    #button {
+      font-size: 1em;
+      font-weight: 600;
+      height: 50px;
+      width: 100%;
+    }
+
+    .text1 {
+      font-size: .7em;
+      font-weight: 500;
+      margin-top: 1em;
+      text-align: center;
+    }
+}
