@@ -20,29 +20,36 @@
                 <div class='btn'>Try it free 7 days <span>then $20/mo. thereafter</span></div>
                 <div class="wrapper">
                     <form action="#">
+                       <div class="form-group">
                         <label for="first name">first name</label>
-                        
                         <input type="text" name="first name" placeholder="First Name" id="fname">
-                        <img src="images/icon-error.svg" alt="icon-error" class="icon-error" id="icon-error1">
-                        <small class="input1 foo">First Name cannnot be empty</small>
-                        <label for="last name">last name</label>
-                        
+                        <img src="images/icon-error.svg" alt="error-icon" class="error-icon">
+                        <p class="error-text">First Name cannnot be empty</p>
+                       </div>
+
+                        <div class="form-group">
+                         <label for="last name">last name</label>
                         <input type="text" name="last name" placeholder="Last Name" id="lname">
-                        <img src="images/icon-error.svg" alt="icon-error" class="icon-error" id="icon-error2">
-                        <small class="input2 foo"> Last Name cannot be empty</small>
-                        <label for="email">email</label>
+                        <img src="images/icon-error.svg" alt="error-icon" class="error-icon">
+                        <p class="error-text"> Last Name cannot be empty</p>
+                        </div>
                         
+                        <div class="form-group">
+                        <label for="email">email</label> 
                         <input type="email" name="email" placeholder="Email Address" id="email">
-                        <img src="images/icon-error.svg" alt="icon-error" class="icon-error" id="icon-error3">
-                        <small class="input3 foo">email cannot be empty</small>
-                        <small class="input5 foo"></small>
-                        <label for="password">password</label>
+                        <img src="images/icon-error.svg" alt="error-icon" class="error-icon">
+                        <p class="error-text">Looks like this is not an email</p>
+                        </div>
                         
+                       <div class="form-group">
+                        <label for="password">password</label>
                         <input type="password" name="password" placeholder="Password" id="password">
-                        <img src="images/icon-error.svg" alt="icon-error" class="icon-error" id="icon-error4">
-                        <small class="input4 foo">Password cannot be empty</small>
-                        <button id="button">Claim your free trial</button>
+                        <img src="images/icon-error.svg" alt="error-icon" class="error-icon">
+                        <p class="error-text">Password cannot be empty</p>
+                       </div>
+                        
                     </form>
+                    <button id="button" name="button" type="button">Claim your free trial</button>
                    <p class="text1">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
                 </div>
             </div>

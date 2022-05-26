@@ -1,54 +1,38 @@
-const form = document.querySelector('form');
-const  button = document.getElementById('button');
-const  fname = document.getElementById('fname');
-const  lname = document.getElementById('lname');
-const  email = document.getElementById('email');
-const  password = document.getElementById('password');
-const  error1 = document.getElementById('icon-error1');
-const  error2 = document.getElementById('icon-error2');
-const  error3 = document.getElementById('icon-error3');
-const  error4 = document.getElementById('icon-error4');
-const  input1 =  document.querySelector('.input1');
-const  input2 = document.querySelector('.input2');
-const  input3 =  document.querySelector('.input3')
-const  input4 =document.querySelector('.input4');
+const button = document.querySelector('#button');
+const inputs  = document.querySelectorAll(' input');
 
 
-form.addEventListener('click', (e)=>{
-    e.preventDefault();
-    if(fname.value === ''){
-        fname.style.border = '2px solid red';
-       error4.style.opacity = '1';
-       input1.style.display = 'block'
-       
-
-    }
-
-    if(lname.value === ''){
-        lname.style.border = '2px solid red';
-        error1.style.opacity = '1';
-        input2.style.display = 'block'
-    }
-
-    if(email.value === '') {
-        email.style.border = '2px solid red';
-        error2.style.opacity = '1';
-        input3.style.display = 'block';
-
-    } else if(!validateEmail(email)){
-        errMsg('email', 'email is required')
-     }
-
-    if(password.value === ''){
-        password.style.border ='2px solid red';
-        error3.style.opacity = '1';
-        input4.style.display = 'block';
-    }
-})
+button.addEventListener('click', listeningToAction)
 
 
-const errMsg = (field, message)=>{
-    const input5 = form[field].parentNode.querySelector('input5');
-    input5.innerHTML = message;
-    input5.style.display = 'block';
-   }
+
+
+
+
+function listeningToAction(){
+  inputs.forEach(input=>{
+      if(!input.value){
+          input.parentElement.classList.add('error');
+      }else {
+          input.parentElement.classList.remove('error');
+      }if(input.type === 'email'){
+          if(validateEmail(input.value)){
+            input.parentElement.classList.remove('error'); 
+          }else {
+              input.parentElement.classList.add('error')
+          }
+          
+      }
+  })
+}
+
+
+
+
+const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };

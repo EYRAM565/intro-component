@@ -36,47 +36,50 @@ body {
       box-shadow: 0 8px rgba(31, 24, 24, 0.247);
   }
 
-  .wrapper form {
+  .wrapper .form-group {
     position: relative;
+    margin-bottom: 20px;
   }
 
-  .wrapper .icon-error {
-    position: absolute;
-    left: 90%;
-    top: 3%;
-    opacity: 0;
+  .error-text, .error-icon{
+    display: none;
   }
 
-  .icon-error:nth-child(3) {
-    top: 25%;
-  }
+  
+.form-group.error .error-text,
+.form-group.error .error-icon {
+  display: block;
+}
 
-  .icon-error:nth-child(7) {
-      top: 47%;
-  }
+.form-group.error input {
+  border: 2px solid #ff7a7a;
+}
 
-  .icon-error:nth-child(11) {
-      top: 69%;
-  }
+
+.error-icon{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
   
 
   .wrapper label {
       display: none;
   }
 
- .wrapper input {
+  input {
       border: 1px solid hsl(246, 25%, 77%);
       border-radius: 5px;
       outline: none;
-      padding: 1em;
+      padding: 16px;
       
   }
 
   input::placeholder {
   color: #3e3c49;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 700;
-  margin: 1em;
+  margin: 16px;
   }
 
   #button {
@@ -86,23 +89,27 @@ body {
     box-shadow: 0 5px #31af79;
     color: white;
     cursor: pointer;
+    margin-top: 10px;
     text-transform: uppercase;
   }
 
-  .foo {
-    color: red;
-    display: none;
+  .error-text {
+    color: #ff7a7a;
+    font-size: .875rem;
     font-style: italic;
-    margin-bottom: .8rem;
+    margin-top: 15px;
     text-align: right;
   }
+
+  
+  
 
   .text1 {
     color: #b9b6d3;
   }
 
   .text1 span {
-    color: red;
+    color: #ff7a7a;
   }
 
 
@@ -167,9 +174,8 @@ body {
     }
 
     input {
-        display: block;
+      
         height: 60px;
-        margin-bottom: 1.2em;
         width: 100%;
     }
 
@@ -250,7 +256,6 @@ body {
     input {
       display: block;
       height: 60px;
-      margin-bottom: 1.2em;
       width: 100%;
     }
 
@@ -262,7 +267,7 @@ body {
     }
 
     .text1 {
-      font-size: .7em;
+      font-size: .9rem;
       font-weight: 500;
       margin-top: 1em;
       text-align: center;
